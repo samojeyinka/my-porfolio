@@ -1,5 +1,4 @@
-/* App.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
 
 .dark-theme{
   --primary-color:#18181b;
@@ -7,6 +6,7 @@
   --tertiary-color:#5c4dfe;
   --text-high:#fff;
   --text-low:#9a9292;
+  --border-color:rgb(61, 57, 57);
 }
 
 .light-theme{
@@ -15,23 +15,96 @@
   --tertiary-color:#5c4dfe;
   --text-high:#000;
   --text-low:gray;
+   --border-color:rgba(224, 219, 219, 0.478);
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .1s ease-in-out; }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: var(--primary-color);
+  font-family: 'Nunito', sans-serif;
+  background: var(--primary-color) !important;
+  
+ 
 }
 
-h1{
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6,a{
   color: var(--text-high);
 }
 
+p{
+  color: var(--text-low);
+}
+
+.app{
+  background:var(--primary-color) ;
+  height: 100vh;
+  width: 100%;
+}
 
 header {
-  padding: 1em;
-  background-color: var(--secondary-color);
+  padding: 2rem 0;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+}
+
+.menu-links{
+  padding: .6rem 2rem;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  background: var(--secondary-color);
+  border-radius: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.menu-links li a{
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: .3s ease-in-out;
+}
+
+
+.menu-links li a:hover{
+  color: var(--tertiary-color);
+}
+
+.theme-switch{
+  padding: .6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  background: var(--secondary-color);
+  color: var(--text-high);
+  border-radius: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.theme-switch .icon{
+  cursor: pointer;
+  opacity: .8;
+  transition: .3s ease-in-out;
+}
+
+.theme-switch .icon:hover{
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 button {
