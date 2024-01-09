@@ -12,14 +12,16 @@ const Header = () => {
     }, [darkMode]);
 
     return (
-        <div className={darkMode ? 'bg-dark' : 'bg-light'}>
-            <div className='theme-icons' onClick={() => setDarkMode(!darkMode)}>
-                {darkMode ? <i className='fa-moon fa-icon text-white'><BiMoon /></i> :
-                    <i className='fa-sun fa-icon text-black'><BiSun /></i>
-                }
-            </div>
-            <h1>Header</h1>
-        </div>
+        <header className={darkMode ? 'bg-dark' : 'bg-light'}>
+        <nav className="navbar">
+            <ul className="menu-links">
+                <li>Home</li>
+                <li>Projects</li>
+                <li>Contact</li>
+                <li>Articles</li>
+            </ul>
+        </nav>
+        </header>
     );
 }
 
