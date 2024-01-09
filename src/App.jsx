@@ -5,13 +5,17 @@ import './App.css'
 import Header from './components/Header'
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import Articles from './pages/Articles'
+import Footer from './components/Footer'
 
 function App() {
   const { theme, toggleTheme } = useTheme();
   return (
   
     <div className={` app ${theme}`}>
+      <div className="container">
         <Header/>   
+        <Footer/>
+        </div>
     </div>
 
 
