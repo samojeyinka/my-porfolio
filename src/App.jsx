@@ -2,24 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { useThemeHook } from './contexts/ThemeProvider'
 import Header from './components/Header'
+import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [theme] = useThemeHook();
-
+  const { theme, toggleTheme } = useTheme();
   return (
-    <main className={theme ? 'bg-light' : 'bg-dark'}>
-        <Header/>
-      <div clas>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+    <main className={`App ${theme}`}>
+             <header>
+        <h1>React Dark Mode</h1>
+        <button onClick={toggleTheme}>Toggle Theme</button>
+      </header>
+      <main>
+        <p>This is a sample React app with light and dark mode.</p>
+      </main>
 
     </main>
   )
