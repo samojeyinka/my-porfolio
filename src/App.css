@@ -29,9 +29,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif; 
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 }
+
 
 a{
   text-decoration: none;
@@ -54,68 +54,22 @@ p{
   
 }
 
+
 .container{
   background: var(--secondary-color) !important;
   width: 85%;
   min-height: 100vh;
   margin: auto !important;
   position: relative;
-  flex: 1;
-}
-
-header {
-  padding: 2rem 0;
-}
-
-.navbar{
-  display: flex;
-  justify-content: center;
-}
-
-.menu-links{
-  padding: .6rem 2rem;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  gap: 1.4rem;
-  background: var(--partial-color);
-  border-radius: 2rem;
-  border: 1px solid var(--border-color);
-}
-
-.menu-links li a{
-  font-size: .93rem;
-  font-weight: 700;
-  transition: .3s ease-in-out;
 }
 
 
-.menu-links li a:hover{
-  color: var(--tertiary-color);
+@media screen and (max-width:700px){
+  .container{
+    width: 100%;
+  }
 }
 
-.theme-switch{
-  padding: .6rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20%;
-  background: var(--secondary-color);
-  color: var(--text-high);
-  border-radius: 2rem;
-  border: 1px solid var(--border-color);
-}
-
-.theme-switch .icon{
-  cursor: pointer;
-  opacity: .8;
-  transition: .3s ease-in-out;
-}
-
-.theme-switch .icon:hover{
-  transform: scale(1.05);
-  opacity: 1;
-}
 
 button {
   padding: 0.5em;
@@ -129,53 +83,3 @@ main {
 }
 
 
-
-/* Footer  */
-
-footer{
-  padding: 1.5rem 0;
-  width: 100%;
-  display: flex;
-  flex-shrink: 0; /* This prevents the footer from shrinking */
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-footer::before{
-  content: '';
-  width: 100%;
-  height: 1px;
-  background: var(--border-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.footer-links{
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.footer-links a{
-  font-size: .9rem;
-  font-weight: 700;
-  color: var(--text-high);
-  transition: .3s ease-in-out;
-
-}
-
-.footer-links li a:hover{
-  color: var(--tertiary-color);
-}
-.footer-flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-footer small{
-  color: var(--text-high);
-  font-size: .9rem;
-}
