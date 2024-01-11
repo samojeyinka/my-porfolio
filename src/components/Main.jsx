@@ -41,8 +41,8 @@ const Main = () => {
                 <div className="right-side-flex">
                     <div className="contact">
                         <div className="ct-top">
-                            <BiEnvelope/>
-                            <b>Stay up to date</b>
+                            <i className='ct-icon'><BiEnvelope/></i>
+                            <h3>Stay up to date</h3>
                         </div>
                         <p>Get notified when I publish something new, and unsubscribe at any time.</p>
                         <div className="email-actions">
@@ -52,23 +52,26 @@ const Main = () => {
                     </div>
                     <div className="work">
                     <div className="w-top">
-                            <BsBagDash/>
-                            <b>Stay up to date</b>
+                     <i className='w-icon'><BsBagDash/></i>
+                            <h3>Work</h3>
                         </div>
                         <div className="w-flex">
                             <div className="work-box">
                                 <div className="wb-left">
                                     <div className="wb-left-img">
                                         <img src={w2}/>
+                                        </div>
                                         <div className="wb-left-dt">
                                             <b>Planetaria</b>
+                                            <br/>
                                             <small>Backend Developer</small>
-                                        </div>
+                                       
+                                    </div>
                                     </div>
                                     <div className="wb-right">
                                         <p>2019 — Present</p>
                                     </div>
-                                </div>
+                                
                             </div>
                         </div>
                         <button className="cv-btn">Download CV <BiArrowFromTop/></button>
