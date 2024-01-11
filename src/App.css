@@ -91,170 +91,73 @@ main {
 }
 
 
-
-
-/* /hero styling */
-
-.hero{
-  padding: 2rem 1rem;
+.main{
+  padding: 3rem 1rem;
   width: 85%;
-  margin: auto !important;
+  margin: auto;
 }
 
-.hero-flex{
+.main-flex{
+  display: flex;
+  gap: 2rem;
+
+}
+
+.main-flex .left-side, .main-flex .right-side{
+  width: 100%;
+}
+.project-flex{
   display: flex;
   flex-direction: column;
-  gap: .8rem;
+  gap: 1.5rem;
 }
 
-.heroImg-box{
-  width: 3.9rem;
-  height: 4.1rem;
-  border-radius: 50%;
-  border: 2px solid var(--border-color);
-  overflow: hidden;
-}
-
-.heroImg-box img{
-  width: 100%;
-  height: 100%;
-}
-
-.hero-title{
-  width: 60%;
-}
-
-.hero-title h1{
-  font-size: 2.5rem;
-  font-weight: 900;
-}
-
-.hero-intro{
-  width: 65%;
-}
-
-.hero-intro p{
-  font-size: 1.1rem;
-  font-weight: 500;
-  line-height: 1.6rem;
-  color: var(--text-high);
-  opacity: .85;
-}
-
-.social-icons-flex{
+.project-box{
+  padding: 1rem;
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-}
-.social-icons-flex .s-icon{
-  margin-top: .4rem;
-  font-size: 1.6rem;
-  color: var(--text-low);
-  cursor: pointer;
-  transition: .3s ease-in-out;
+  border-radius: 1rem;
+  position: relative;
 }
 
-.social-icons-flex .s-icon:hover{
-  transform: scale(1.1);
-  color: var(--text-high);
+.project-box::after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  position: absolute;
+  bottom:0;
+left: 0;
 }
 
-@media screen and (max-width:1200px){
-  .hero{
-    padding: 2rem 1rem;
-    width: 90%;
-  }
+.main .projects .pj-img-box {
+  width: 100%;
+  height: 18rem;
 }
 
 
-@media screen and (max-width:1100px){
-  .hero{
-    padding: 2rem .5rem;
-    width: 95%;
-  }
-
-  .hero-title h1{
-    font-size: 2.3rem;
-  }
-  
-  .hero-intro{
-    width: 70%;
-  }
-  
-}
-
-@media screen and (max-width:900px){
-  .hero{
-    padding: 2rem .5rem;
-    width: 95%;
-  }
-
-  .hero-title{
-    width: 70%;
-  }
-
-  .hero-title h1{
-    font-size: 2rem;
-  }
-  
-  .hero-intro{
-    width: 80%;
-  }
-  
-}
-
-
-@media screen and (max-width:700px){
-  .hero{
-    padding: 2rem 1.2rem;
-    width: 100%;
-  }
-
-  .hero-title{
-    width: 90%;
-  }
-
-  .hero-title h1{
-    font-size: 1.8rem;
-  }
-  
-  .hero-intro{
-    width: 100%;
-  }
-  
-}
-
-.gallery{
-padding: 2rem 0;
-overflow: hidden;
-}
-
-.gallery-flex{
-  display: flex;
-  gap:1.3rem;
-}
-
-.photo-box{
-  width: 90%;
-  height: 20rem;
-  border-radius: 2rem;
-  overflow: hidden;
-}
-
-.photo-box img{
+.main .projects .pj-img-box img{
   width: 100%;
   height: 100%;
 }
 
-.photo3{
-  transform: rotate(-3deg);
+.projects h3{
+  padding-bottom: 2rem;
 }
 
-.photo2{
-  transform: rotate(3deg);
+.projects .pj-title{
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-@media screen and (max-width:700px){
-  .photo5{
-    display: none;
-  }
+
+.projects .pj-description{
+  font-size: .95rem;
+}
+
+.project-box a{
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--tertiary-color);
 }

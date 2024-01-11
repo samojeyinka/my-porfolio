@@ -1,7 +1,7 @@
 import React from 'react'
 import heroImg from '../assets/images/image1.jpeg'
 import { BiLogoGithub, BiLogoTwitter, BiLogoLinkedinSquare, BiLogoWhatsapp } from 'react-icons/bi'
-
+import '../assets/stylesheets/Hero.css'
 const Hero = () => {
     return (
         <section className="hero">

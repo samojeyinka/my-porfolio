@@ -4,6 +4,7 @@ import photo2 from '../assets/images/photo2.jpeg'
 import photo3 from '../assets/images/photo3.jpeg'
 import photo4 from '../assets/images/photo4.jpeg'
 import photo5 from '../assets/images/photo5.jpeg'
+import '../assets/stylesheets/gallery.css'
 
 const Gallery = () => {
   return (
