@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
 
 .dark-theme{
-  --primary-color:#18181b;
-  --secondary-color:#202022;
+  --primary-color:#000;
+  --secondary-color:#18181a;
   --tertiary-color:#5c4dfe;
   --partial-color:#252529;
   --text-high:#fff;
