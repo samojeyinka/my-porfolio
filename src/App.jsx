@@ -6,6 +6,7 @@ import Header from './components/Header'
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import Articles from './pages/Articles'
 import Footer from './components/Footer'
+import Home from './pages/Home'
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -13,8 +14,7 @@ function App() {
   
     <div className={` app ${theme}`}>
       <div className="container">
-        <Header/>   
-        <Footer/>
+        <Home/>
         </div>
     </div>
 

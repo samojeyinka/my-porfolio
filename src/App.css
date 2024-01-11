@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
 
 .dark-theme{
   --primary-color:#000;
@@ -6,13 +6,13 @@
   --tertiary-color:#5c4dfe;
   --partial-color:#252529;
   --text-high:#fff;
-  --text-low:#9a9292;
+  --text-low:#d5d0d0;
   --border-color:rgb(61, 57, 57);
 }
 
 .light-theme{
-  --primary-color:white;
-  --secondary-color: rgba(255, 255, 255, 0.303);
+  --primary-color:#efefefd5;
+  --secondary-color: #fff;
   --tertiary-color:#5c4dfe;
   --text-high:#000;
   --text-low:gray;
@@ -63,6 +63,13 @@ p{
   position: relative;
 }
 
+@media screen and (max-width:1300px){
+  
+.container{
+  width: 90%;
+}
+}
+
 
 @media screen and (max-width:700px){
   .container{
@@ -83,3 +90,134 @@ main {
 }
 
 
+
+
+/* /hero styling */
+
+.hero{
+  padding: 2rem 1rem;
+  width: 85%;
+  margin: auto !important;
+}
+
+.hero-flex{
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.heroImg-box{
+  width: 3.9rem;
+  height: 4.1rem;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  overflow: hidden;
+}
+
+.heroImg-box img{
+  width: 100%;
+  height: 100%;
+}
+
+.hero-title{
+  width: 60%;
+}
+
+.hero-title h1{
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.hero-intro{
+  width: 65%;
+}
+
+.hero-intro p{
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: var(--text-high);
+  opacity: .85;
+}
+
+.social-icons-flex{
+  display: flex;
+  gap: 1rem;
+}
+.social-icons-flex .s-icon{
+  margin-top: .4rem;
+  font-size: 1.6rem;
+  color: var(--text-low);
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.social-icons-flex .s-icon:hover{
+  transform: scale(1.1);
+  color: var(--text-high);
+}
+
+@media screen and (max-width:1200px){
+  .hero{
+    padding: 2rem 1rem;
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width:1100px){
+  .hero{
+    padding: 2rem .5rem;
+    width: 95%;
+  }
+
+  .hero-title h1{
+    font-size: 2.3rem;
+  }
+  
+  .hero-intro{
+    width: 70%;
+  }
+  
+}
+
+@media screen and (max-width:900px){
+  .hero{
+    padding: 2rem .5rem;
+    width: 95%;
+  }
+
+  .hero-title{
+    width: 70%;
+  }
+
+  .hero-title h1{
+    font-size: 2rem;
+  }
+  
+  .hero-intro{
+    width: 80%;
+  }
+  
+}
+
+
+@media screen and (max-width:700px){
+  .hero{
+    padding: 2rem 1.2rem;
+    width: 100%;
+  }
+
+  .hero-title{
+    width: 90%;
+  }
+
+  .hero-title h1{
+    font-size: 1.8rem;
+  }
+  
+  .hero-intro{
+    width: 100%;
+  }
+  
+}
