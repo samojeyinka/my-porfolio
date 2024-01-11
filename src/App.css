@@ -91,13 +91,11 @@ button {
   cursor: pointer;
 }
 
-main {
-  padding: 1em;
-}
+
 
 
 .main{
-  padding: 3rem 1rem;
+  padding: 6rem 1rem;
   width: 85%;
   margin: auto;
 }
@@ -254,7 +252,7 @@ left: 0;
 }
 
 .wb-left b{
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-high);
 }
 
@@ -266,4 +264,32 @@ left: 0;
 .wb-right p{
   font-size: .9rem;
   color: var(--text-low);
+}
+
+.work .cv-btn{
+  font-size: 1.1rem;
+  color: var(--text-high);
+  width: 100%;
+  border-radius:.4rem ;
+  background: var(--partial-color);
+  font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width:900px){
+  .main{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:800px){
+  .main{
+    width: 100%;
+  }
+  .main-flex{
+   flex-direction: column;
+  }
+  .right-side .work{
+    margin-bottom: 3rem;
+  }
 }

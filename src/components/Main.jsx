@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {BiEnvelope, BiArrowFromTop, BiNetworkChart} from 'react-icons/bi'
 import {BsBagDash, BsBag} from 'react-icons/bs'
 import w2 from '../assets/images/w2.svg'
+import w1 from '../assets/images/w1.svg'
 import pro1 from '../assets/images/pro1.jpeg'
 
 const Main = () => {
@@ -53,7 +54,7 @@ const Main = () => {
                     <div className="work">
                     <div className="w-top">
                      <i className='w-icon'><BsBagDash/></i>
-                            <h3>Work</h3>
+                            <h3>Experience</h3>
                         </div>
                         <div className="w-flex">
                             <div className="work-box">
@@ -62,7 +63,7 @@ const Main = () => {
                                         <img src={w2}/>
                                         </div>
                                         <div className="wb-left-dt">
-                                            <b>Planetaria</b>
+                                            <b>AirBNB</b>
                                             <br/>
                                             <small>Backend Developer</small>
                                        
@@ -70,6 +71,23 @@ const Main = () => {
                                     </div>
                                     <div className="wb-right">
                                         <p>2019 — Present</p>
+                                    </div>
+                                
+                            </div>
+                            <div className="work-box">
+                                <div className="wb-left">
+                                    <div className="wb-left-img">
+                                        <img src={w1}/>
+                                        </div>
+                                        <div className="wb-left-dt">
+                                            <b>Planetaria</b>
+                                            <br/>
+                                            <small>Software Engineer</small>
+                                       
+                                    </div>
+                                    </div>
+                                    <div className="wb-right">
+                                        <p>2017 — 2019</p>
                                     </div>
                                 
                             </div>
