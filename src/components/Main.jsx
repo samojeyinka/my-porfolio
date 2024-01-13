@@ -5,6 +5,7 @@ import {BsBagDash, BsBag} from 'react-icons/bs'
 import w2 from '../assets/images/w2.svg'
 import w1 from '../assets/images/w1.svg'
 import pro1 from '../assets/images/pro1.jpeg'
+import '../assets/stylesheets/main.css'
 
 const Main = () => {
   return (
