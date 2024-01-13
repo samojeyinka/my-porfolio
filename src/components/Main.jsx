@@ -6,38 +6,13 @@ import w2 from '../assets/images/w2.svg'
 import w1 from '../assets/images/w1.svg'
 import pro1 from '../assets/images/pro1.jpeg'
 import '../assets/stylesheets/main.css'
+import Projects from './Projects'
 
 const Main = () => {
   return (
     <section className="main">
         <div className="main-flex">
-            <div className="left-side">
-                <div className="projects">
-                    <h3><BiNetworkChart/> My projects</h3>
-                    <div className="project-flex">
-                        <div className="project-box">
-                            <div className="pj-img-box">
-                                <img src={pro1}/>
-                            </div>
-                            <h4 className="pj-title">Introducing Animaginary: 
-                            High performance web animations</h4>
-                            <p className="pj-description">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity
-                             has spread across our entire solar system.</p>
-                            <Link>View project</Link>
-                        </div>
-                        <div className="project-box">
-                            <div className="pj-img-box">
-                                <img src={pro1}/>
-                            </div>
-                            <h4 className="pj-title">Introducing Animaginary: 
-                            High performance web animations</h4>
-                            <p className="pj-description">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity
-                             has spread across our entire solar system.</p>
-                            <Link>View project</Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
+         <Projects/>
 {/* The email and work side */}
             <div className="right-side">
                 <div className="right-side-flex">

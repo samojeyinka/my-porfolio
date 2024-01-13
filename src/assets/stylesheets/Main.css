@@ -10,7 +10,7 @@
   
   }
   
-  .main-flex .left-side, .main-flex .right-side{
+  .left-side,  .right-side{
     width: 100%;
   }
   .project-flex{
@@ -38,13 +38,13 @@
   left: 0;
   }
   
-  .main .projects .pj-img-box {
+  .projects .pj-img-box {
     width: 100%;
     height: 18rem;
   }
   
   
-  .main .projects .pj-img-box img{
+   .projects .pj-img-box img{
     width: 100%;
     height: 100%;
   }
