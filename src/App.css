@@ -93,7 +93,9 @@ button {
 }
 
 .mp{
+  width: 100%;
   padding-bottom: 5rem;
+  margin: auto;
 }
 
 .mp .projects{
@@ -106,6 +108,14 @@ button {
   gap: 1.1rem;
 }
 
+.mp .project-box{
+  border:1px solid var(--border-color)
+}
+
+.mp .project-box::after{
+ display: none;
+}
+
 
 @media screen and (max-width:1200px){
   .mp .project-flex{
@@ -114,7 +124,21 @@ button {
   }
 }
 
+@media screen and (max-width:700px){
+.mp{
+  width: 80%;
+  padding-bottom: 5rem;
+}
+
+.mp .project-flex{
+  grid-template-columns:1fr;
+}
+}
+
 @media screen and (max-width:600px){
+  .mp{
+    width: 100%;
+  }
   .mp .project-flex{
     grid-template-columns:1fr;
   }
