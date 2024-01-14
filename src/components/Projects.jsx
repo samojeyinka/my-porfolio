@@ -1,57 +1,50 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import {BiEnvelope, BiArrowFromTop, BiNetworkChart} from 'react-icons/bi'
-import pro1 from '../assets/images/pro1.jpeg'
+import noimage from '../assets/images/noimage.jpeg'
 import { Link } from 'react-router-dom'
 import '../assets/stylesheets/main.css'
-
+import axios from 'axios'
 
 const Projects = () => {
+
+    const [projects, setProjects]  = useState([]);
+
+
+  const fetchProjects = async() =>{
+    try {
+      const res = await axios.get('http://localhost:3000/api/v1/projects');
+      const projects = res.data;
+        setProjects(projects);
+      console.log(projects);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
+
+  useEffect(() => {
+    fetchProjects();
+  },[]);
+
   return (
     <>
        <div className="left-side">
                 <div className="projects">
                     <h3><BiNetworkChart/> My projects</h3>
                     <div className="project-flex">
+                        { projects.length < 1 ? (<div>
+                            <h3>No projects added yet😒</h3>
+                        </div>) :
+                        projects.map(project => (
                         <div className="project-box">
                             <div className="pj-img-box">
-                                <img src={pro1}/>
+                                <img src={project.image_url || noimage}/>
                             </div>
-                            <h4 className="pj-title">Introducing Animaginary: 
-                            High performance web animations</h4>
-                            <p className="pj-description">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity
-                             has spread across our entire solar system.</p>
+                            <h4 className="pj-title">{project.name}</h4>
+                            <p className="pj-description">{project.description}</p>
                             <Link>View project</Link>
                         </div>
-                        <div className="project-box">
-                            <div className="pj-img-box">
-                                <img src={pro1}/>
-                            </div>
-                            <h4 className="pj-title">Introducing Animaginary: 
-                            High performance web animations</h4>
-                            <p className="pj-description">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity
-                             has spread across our entire solar system.</p>
-                            <Link>View project</Link>
-                        </div>
-                        <div className="project-box">
-                            <div className="pj-img-box">
-                                <img src={pro1}/>
-                            </div>
-                            <h4 className="pj-title">Introducing Animaginary: 
-                            High performance web animations</h4>
-                            <p className="pj-description">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity
-                             has spread across our entire solar system.</p>
-                            <Link>View project</Link>
-                        </div>
-                        <div className="project-box">
-                            <div className="pj-img-box">
-                                <img src={pro1}/>
-                            </div>
-                            <h4 className="pj-title">Introducing Animaginary: 
-                            High performance web animations</h4>
-                            <p className="pj-description">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity
-                             has spread across our entire solar system.</p>
-                            <Link>View project</Link>
-                        </div>
+))}
                     </div>
                 </div>
             </div>
