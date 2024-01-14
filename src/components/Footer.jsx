@@ -7,6 +7,9 @@ const Footer = () => {
        <div className="footer-flex">
        <ul className="footer-links">
                 <li>
+                    <Link to={'/'}>Home</Link>
+                </li>
+                <li>
                     <Link to={'/about'}>About</Link>
                 </li>
                 <li>
@@ -15,9 +18,7 @@ const Footer = () => {
                 <li>
                     <Link to={'/projects'}>Projects</Link>
                 </li>
-                <li>
-                    <Link to={'/apis'}>APIs</Link>
-                </li>
+            
                 <li>
                     <Link to={'/contact'}>Contact</Link>
                 </li>

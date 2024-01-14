@@ -89,21 +89,23 @@ header {
 
 .blur{
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4); 
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.626); 
+    position: fixed;  
     top: 0;
     left: 0;
-    position: absolute !important;
     display: none;
+    z-index: 1;
     
 }
 
 
-  .menu-links{
+  nav .menu-links{
     padding: 2rem;
     width: 95%;
     flex-direction: column;
     position: absolute;
+    top: 0;
     z-index: 2;
     background: var(--secondary-color);
     display: none;

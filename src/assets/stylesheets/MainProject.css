@@ -22,6 +22,8 @@
   .mp .project-box::after{
    display: none;
   }
+
+
   
   
   @media screen and (max-width:1200px){
