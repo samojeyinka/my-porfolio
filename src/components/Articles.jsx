@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import {FaGreaterThan} from 'react-icons/fa'
 import axios from 'axios'
 import formatDate from '../utils/FormatDate'
+import { Link } from 'react-router-dom'
 
 const Articles = () => {
 
@@ -36,6 +37,7 @@ const Articles = () => {
           chronological order.</p>
 
           <div className="articles-flex">
+          
             {/* article box start */}
 
             {articles.length < 1 ? (<div>
@@ -43,6 +45,7 @@ const Articles = () => {
             </div>) :
             
             articles.map(article => (
+                <Link to={`${article.title.replace(/ /g, '-')}?id=${article.id}`}>
                  <div className="article-box">
                  <div className="article-date">
                    <p>{formatDate(article.created_at)}</p>
@@ -54,6 +57,7 @@ const Articles = () => {
                         <button>Read article <FaGreaterThan size={10}/></button>
                  </div>
                </div>
+               </Link>
             ))
            
            }

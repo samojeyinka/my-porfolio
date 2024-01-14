@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
+import ArticleShow from './pages/ArticleShow';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
 
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="articles" element={<Articles />} />
       <Route path="contact" element={<Contact />} />
       <Route path="projects" element={<Projects />} />
+      <Route path="articles/:id" element={<ArticleShow />} />
     </Route>
   )
 )

@@ -13,7 +13,7 @@ const Projects = () => {
   const fetchProjects = async() =>{
     try {
       const res = await axios.get('http://localhost:3000/api/v1/projects');
-      const projects = res.data;
+      const projects = res.data.reverse();
         setProjects(projects);
       console.log(projects);
     } catch (error) {
