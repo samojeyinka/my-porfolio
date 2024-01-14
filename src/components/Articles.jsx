@@ -1,7 +1,31 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import {FaGreaterThan} from 'react-icons/fa'
+import axios from 'axios'
+import formatDate from '../utils/FormatDate'
 
 const Articles = () => {
+
+  const [articles, setArticles]  = useState([]);
+
+
+  const fetchArticles = async() =>{
+    try {
+      const res = await axios.get('http://localhost:3000/api/v1/articles');
+      const articles = res.data;
+        setArticles(articles);
+      console.log(articles);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
+
+  useEffect(() => {
+    fetchArticles();
+  },[]);
+
+
+
   return (
     <>
     <div className='articles'>
@@ -12,36 +36,28 @@ const Articles = () => {
           chronological order.</p>
 
           <div className="articles-flex">
-            <div className="article-box">
-              <div className="article-date">
-                <p>September 5, 2022</p>
-              </div>
-              <div className="article-content">
-                <h4>Crafting a design system for 
-                  a multiplanetary future
-                  </h4>
-                  <p>Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread
-                     across our entire solar system.
-                     </p>
-                     
-                     <button>Read article <FaGreaterThan size={10}/></button>
-              </div>
-            </div>
-            <div className="article-box">
-              <div className="article-date">
-                <p>September 5, 2022</p>
-              </div>
-              <div className="article-content">
-                <h4>Crafting a design system for 
-                  a multiplanetary future
-                  </h4>
-                  <p>Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread
-                     across our entire solar system.
-                     </p>
-                     
-                     <button>Read article <FaGreaterThan size={10}/></button>
-              </div>
-            </div>
+            {/* article box start */}
+
+            {articles.length < 1 ? (<div>
+              <h5>No articles yet😒</h5>
+            </div>) :
+            
+            articles.map(article => (
+                 <div className="article-box">
+                 <div className="article-date">
+                   <p>{formatDate(article.created_at)}</p>
+                 </div>
+                 <div className="article-content">
+                   <h4>{article.title}</h4>
+                     <p>{article.content}</p>
+                        
+                        <button>Read article <FaGreaterThan size={10}/></button>
+                 </div>
+               </div>
+            ))
+           
+           }
+           {/* article box end */}
           </div>
     </div>
     </>
