@@ -9,6 +9,8 @@ const Contact = () => {
     <section className="contact-page">
     <Header/>
       <ContactPart/>
+      <br/>
+      <br/>
       <Footer/>
     </section>
   )
