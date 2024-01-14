@@ -19,6 +19,13 @@ const Articles = () => {
       console.log(error)
     }
   }
+
+  const truncateString = (str, maxLength) => {
+    if (str.length <= maxLength) {
+      return str;
+    }
+    return str.slice(0, maxLength) + '...';
+  };
   
 
   useEffect(() => {
@@ -52,7 +59,7 @@ const Articles = () => {
                  </div>
                  <div className="article-content">
                    <h4>{article.title}</h4>
-                     <p>{article.content}</p>
+                     <p>{truncateString(article.content,200)}</p>
                         
                         <button>Read article <FaGreaterThan size={10}/></button>
                  </div>
