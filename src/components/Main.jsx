@@ -87,39 +87,23 @@ const Main = () => {
                             <div className="work-box">
                                 <div className="wb-left">
                                     <div className="wb-left-img">
-                                        <img src={w2}/>
-                                        </div>
-                                        <div className="wb-left-dt">
-                                            <b>AirBNB</b>
-                                            <br/>
-                                            <small>Backend Developer</small>
-                                       
-                                    </div>
-                                    </div>
-                                    <div className="wb-right">
-                                        <p>2019 — Present</p>
-                                    </div>
-                                
-                            </div>
-                            <div className="work-box">
-                                <div className="wb-left">
-                                    <div className="wb-left-img">
                                         <img src={w1}/>
                                         </div>
                                         <div className="wb-left-dt">
-                                            <b>Planetaria</b>
+                                            <b>Self Employed</b>
                                             <br/>
-                                            <small>Software Engineer</small>
+                                            <small>Fullstack Developer</small>
                                        
                                     </div>
                                     </div>
                                     <div className="wb-right">
-                                        <p>2017 — 2019</p>
+                                        <p>2022 — Present</p>
                                     </div>
                                 
                             </div>
+                            
                         </div>
-                        <button className="cv-btn">Download CV <BiArrowFromTop/></button>
+                        <Link to={'https://docs.google.com/document/d/1Qlf4hD-5coDID9DtgRSc6YfbCPnI8Yg-CSI6-Dn6xHg'} target='_blank'><button className="cv-btn">View CV <BiArrowFromTop/></button></Link>
                     </div>
                 </div>
             </div>

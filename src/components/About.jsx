@@ -13,24 +13,11 @@ const About = () => {
             I’m Samuel Ojeyinka. I live in Osogbo Nigeria,Crafting Tomorrow's Code Today.
           </h2>
           <div className="about-text">
-            <p>
-              I’ve loved making things for as long as I can remember,
-              and wrote my first program when I was 6 years old, just two
-              weeks after my mom brought home the brand new Macintosh LC 550 that I taught myself to type on.
+            <p>As a dynamic full-stack developer with a focus on Ruby on Rails, Node.js/Express, and React, I bring three years of proven experience in creating scalable web applications. My expertise lies in backend development, and I am particularly passionate about utilizing Ruby on Rails to build robust and efficient systems. I have a track record of successfully dockerizing both frontend and backend components of applications, ensuring seamless deployment and scalability.
 
-              The only thing I loved more than computers as a kid was space. When I was 8,
-              I climbed the 40-foot oak tree at the back of our yard while wearing my older sister’s
-              motorcycle helmet, counted down from three, and jumped — hoping the tree was tall enough
-              that with just a bit of momentum I’d be able to get to orbit.
+In addition to my proficiency in writing tests using RSpec, I am well-versed in working with SQL databases and NoSQL technologies. My commitment to high-security authentication practices and experience in deploying applications on cloud platforms like Heroku, as well as rendering and managing VPS, showcases my dedication to maintaining the integrity and reliability of the projects I undertake.
 
-              I spent the next few summers indoors working on a rocket design, while I recovered from
-              the multiple surgeries it took to fix my badly broken legs. It took nine iterations, but
-              when I was 15 I sent my dad’s Blackberry into orbit and was able to transmit a photo back
-              down to our family computer from space.
-
-              Today, I’m the founder of Planetaria, where we’re working on civilian space suits and manned
-              shuttle kits you can assemble at home so that the next generation of kids really can make it to orbit — from the comfort of their own backyards.
-            </p>
+Currently seeking opportunities in Ruby on Rails full-stack or backend roles, I am open to networking with like-minded professionals to explore how I can contribute to the success of your team. Let's discuss how my skills and passion for web development can add value to your projects.</p>
           </div>
         </div>
         <div className="about-right">
