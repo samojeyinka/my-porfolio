@@ -42,7 +42,7 @@ const Projects = () => {
                             </div>
                             <h4 className="pj-title">{project.name}</h4>
                             <p className="pj-description">{project.description}</p>
-                            <Link to={`/projects/${project.name.replace(/ / ,'-')}?id=${project.id}`}>View project</Link>
+                            <Link to={`/projects/${project.name.replace(/ /g,'-')}?id=${project.id}`}>View project</Link>
                         </div>
 ))}
                     </div>
