@@ -11,6 +11,10 @@ const About = () => {
     <div>
       <Header />
       <AboutPart />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Footer />
     </div>
   )

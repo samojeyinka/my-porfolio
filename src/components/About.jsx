@@ -2,6 +2,7 @@ import React from 'react'
 import abi from '../assets/images/abi.png'
 import { BiLogoGithub, BiLogoTwitter, BiLogoLinkedinSquare, BiLogoWhatsapp } from 'react-icons/bi'
 import {BiEnvelope} from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -39,16 +40,16 @@ const About = () => {
           <div className="social-box">
             <div className="social-icons">
               <i className="s-icon">
-                <BiLogoGithub />
+              <Link to={'https://github.com/samojeyinka'} target='_blank'><BiLogoGithub /></Link>
               </i>
               <i className="s-icon">
-                <BiLogoTwitter />
+              <Link to={'https://twitter.com/sam_ojeyinka'} target='_blank'><BiLogoTwitter /></Link>
               </i>
               <i className="s-icon">
-                <BiLogoLinkedinSquare />
+              <Link to={'https://www.linkedin.com/in/ojeyinka-samuel/'} target='_blank'><BiLogoLinkedinSquare /></Link>
               </i>
               <i className="s-icon">
-                <BiLogoWhatsapp />
+              <Link to={'https://wa.me/2348122624063'} target='_blank'> <BiLogoWhatsapp /></Link>
               </i>
             </div>
 
